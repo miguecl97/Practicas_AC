@@ -1,0 +1,8 @@
+export OMP_THREAD_LIMIT=12
+
+for((P=OMP_THREAD_LIMIT;P>0;P=P/2))
+do
+	export OMP_NUM_THREADS=$P
+	echo -e "\nPara $OMP_NUM_THREADS thredas"	
+	./script
+done
